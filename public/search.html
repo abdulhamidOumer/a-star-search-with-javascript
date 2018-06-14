@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+        <link rel="stylesheet" href="search.css" type="text/css">
+        <link rel="stylesheet" href="alertify/css/alertify.css">
+        <link rel="stylesheet" href="alertify/css/themes/default.css">
+        <link rel="stylesheet" href="alertify/css/themes/bootstrap.css">
+        <link rel="stylesheet" href="alertify/css/themes/semantic.css">
+        <link rel="stylesheet" href="contextMenu.js/contextMenu.css">
+    </head>
+	
+	<body id="body">
+
+            <div id="topContents">
+                <h1 style="font-family: 'Roboto', sans-serif;font-weight:bold; padding:0.5%; position:absolute; border-radius:10px; margin-left:2%; background:#07775b; color:white;">Route Finding With A-Star</h1>
+            </div>
+                
+            <div id="centerContent">
+                
+            </div>
+            
+            <div id="bottomContent">
+                <select name="Source" id="sourceInput" style="height:80%;width:15%;">
+                    <option value="#">--Start Node--</option>
+                </select>
+                <select name="Goal" id="goalInput" style="height:80%;width:15%;">
+                        <option value="#">--Goal Node--</option>
+                </select>
+                <div id="addNode">
+                        <p>+    Add Node</p>
+                </div>
+                <div id="addHeuristics">
+                        <p>Add Heuristics   </p>
+                </div>
+                <div id="runStarAlgorithm" class="save">
+                        <p>&#9658; &emsp;Run</p>
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                        <div class="modal-content">
+                                <div class="modal-header">
+                                  <span class="close">&times;</span>
+                                  <h2>Add Heuristics From Source To Goal</h2>
+                                </div>
+                                <div class="modal-body">
+                                  <h4 id="modalNotice"></h4>
+                                </div>
+                                <div class="modal-footer">
+                                        <div class="save2" id="saveHeuristics"><p>Save</p></div>
+                                </div>
+                              </div>    
+                </div>
+        <script src="jquery-3.2.1.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script src="jsplumb.js "></script>
+        <script src="alertify/alertify.min.js"></script>
+        <script src="	contextMenu.js/contextMenu.js"></script>
+        <script src="search.js"></script>
+	</body>
+</html>

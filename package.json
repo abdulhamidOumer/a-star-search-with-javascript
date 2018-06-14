@@ -1,0 +1,16 @@
+{
+  "name": "a-star-search-implementation",
+  "version": "1.0.0",
+  "description": "A javascript implementation of a-star search algorithm to find shotest path between nodes based on data given from the user",
+  "main": "App.js",
+  "scripts": {
+    "start": "node App.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdulhamid Oumer Mohammed",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "forwarded-for": "^1.0.1"
+  }
+}

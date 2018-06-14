@@ -1,0 +1,309 @@
+html{
+    height: 100%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+body{
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    
+}
+
+.node{
+    padding: 16px;
+    padding-top: 0;
+    position: absolute;
+    z-index: 4;
+    border: 1px solid #2e6f9a;
+    box-shadow: 2px 2px 19px #e0e0e0;
+    -o-box-shadow: 2px 2px 19px #e0e0e0;
+    -webkit-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    opacity: 0.8;
+    cursor: move;
+    background-color: white;
+    font-size: 11px;
+    -webkit-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+    color: #434343;
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+}
+
+
+#topContents{
+    width: 100%;
+    height: 13%;
+    position: fixed;
+    background: #07775b;
+}
+#centerContent{
+    margin-top: 0.5%;
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    background: #0ca37d;
+    top: 13.5%;  
+    padding-bottom: 0.5%; 
+}
+
+
+#bottomContent{
+    width: 100%;
+    height:9%;
+    background: #07775b;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+}
+
+#element2{
+    left: 200px;
+}
+.ep {
+    position: absolute;
+    right: 5px;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 100%;
+    background-color: #0c76a3;
+    cursor: pointer;
+}
+
+.ep:hover{
+    box-shadow: 0 0 6px black;
+}
+
+.closeNode{
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 100%;
+    color: #970909;
+    font-size: 1em;
+    width: 1em;
+    height: 1em;
+}
+
+.closeNode:hover{
+    box-shadow: 0 0 6px black;
+}
+
+.editNode{
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 100%;
+    color: #525300;
+    display: inline-block;
+    font-size: 1.7em;
+    width: 1em;
+    height: 1em;
+}
+
+.editNode:hover{
+    box-shadow: 0 0 6px black;
+}
+.aLabel {
+    color: #434343;
+    font-family: "Lato",sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    -webkit-transition: background-color 0.25s ease-in;
+    -moz-transition: background-color 0.25s ease-in;
+    transition: background-color 0.25s ease-in;
+}
+
+.aLabel:hover{
+    background-color: #1e8151;
+    color: white;
+}
+
+.aLabel {
+    background-color: white;
+    opacity: 0.8;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    border: 1px solid #346789;
+    cursor: pointer;
+}
+
+.nodeName{
+    font-weight: bold;
+}
+.nodeName:hover{
+    cursor: pointer;
+    box-shadow: 0 0 6px black;
+
+}
+
+.nodeName:focus{
+
+    border: 2px solid #0c76a3;
+}
+
+#addNode{
+    width: 15%;
+    height: 80%;
+    text-align: center;
+    background-color: #e6d118;
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    bottom: 0;
+    left:  0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+#addNode:hover{
+    background: #ced12b;
+}
+#sourceInput{
+    margin-top:5px;
+}
+
+.save{
+    width: 15%;
+    height: 80%;
+    text-align: center;
+    background-color: #0a6ec0;
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    bottom: 0;
+    right:  0;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.save:hover{
+    background: #01457c;
+}
+
+.save2{
+    width: 15%;
+    padding: 0.3%;
+    text-align: center;
+    background-color: #0a6ec0;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    bottom: 0;
+    right:  0;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.save2:hover{
+    background: #01457c;
+}
+
+#addHeuristics{
+    width: 15%;
+    height: 80%;
+    text-align: center;
+    background-color: #e6d118;
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    bottom: 0;
+    left:  16%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+#addHeuristics:hover{
+    background: #ced12b;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+ /* Modal Header */
+ .modal-header {
+    padding: 2px 16px;
+    background-color:#1e8151;
+    color: white;
+    font-weight: bold;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color:#1e8151;
+    color: white;
+}
+
+.modal-content {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+} 
+
+.close {
+    color: rgb(255, 255, 255);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
