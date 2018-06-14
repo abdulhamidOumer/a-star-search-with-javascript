@@ -199,14 +199,14 @@ jsPlumb.ready(function () {
                     alertify.error("Another node exists with the same name");
                     return;
                 }
-                else if(value === "" || value === " "){
-                    alertify.error("Please Enter A name for the node.");
-                    return;
-                }
-                else if(value.includes(" ")){
-                    alertify.error("A node name can not contain spaces");
-                    return;
-                }
+            }
+            if(value === "" || value === " "){
+                alertify.error("Please Enter A name for the node.");
+                return;
+            }
+            else if(value.includes(" ")){
+                alertify.error("A node name can not contain spaces");
+                return;
             }
             newNode(e.offsetX, e.offsetY,value);  
          }
