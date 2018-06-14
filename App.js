@@ -27,7 +27,6 @@ app.post('/findPath',function(req, res){
     var source = req.body.source;
     var goal = req.body.goal;
     var the_path = search_path(source, goal, mainData);
-    console.log("\n\n");
     res.send(the_path);
     
 });
